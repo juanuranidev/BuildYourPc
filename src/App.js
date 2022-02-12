@@ -1,6 +1,7 @@
 import React from 'react';
-import { getFirestoreApp } from './FIrebase/DataBaseConfig';
+import { getFirestoreApp } from './Firebase/DataBaseConfig';
 import Main from './Pages/Main/Main';
+import './_base.scss'
 
 getFirestoreApp()
 

@@ -1,0 +1,20 @@
+.asideItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 1rem auto;
+    .asideItem_img{
+        height: 3rem;
+        margin-right: 1rem;
+    }
+    .asideItem_div{
+        .asideItem_h3{
+            margin: 0rem;
+        }
+        .asideItem_p{
+            margin: 0rem;
+            width: 10rem;
+        }
+    }
+}
