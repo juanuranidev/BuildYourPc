@@ -1,5 +1,6 @@
 import React from 'react'
 import AsideItem from '../AsideItem/AsideItem'
+import './_Aside.scss'
 
 const Aside = () => {
   return (

@@ -1,14 +1,17 @@
 import React from 'react';
+import Aside from './Aside/Aside';
 import { getFirestoreApp } from './Firebase/DataBaseConfig';
-import Main from './Pages/Main/Main';
-import './_base.scss'
+import Products from './Products/Products';
+import './_App.scss'
+import './Styles/_base.scss'
 
 getFirestoreApp()
 
 function App() {
   return (
-    <div className='App'>
-     <Main />
+    <div className='app'>
+      <Aside />
+      <Products />
     </div>
   );
 }
