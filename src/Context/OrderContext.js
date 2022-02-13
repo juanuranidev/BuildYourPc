@@ -11,15 +11,15 @@ export const OrderContextProvider = ({children}) => {
     const [data, setData] = useState([])
     const [order, setOrder] = useState([])
     const [categoryToFetch, setCategoryToFetch] = useState()
-    
 
     const addProductToOrder = (product) => {
-        setOrder([...order, product])
-        console.log(order)
+        let isInOrder = order.find(prod => prod.category === product.category)
+        if(isInOrder){
+            setOrder([...order.filter(x => x.category !== product.category), product])
+        } else {
+            setOrder([...order, product])
+        }
     }
-
-
-
 
     const getProducts = (categoryToFetch) => {
         console.log('getting products')

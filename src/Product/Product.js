@@ -1,20 +1,20 @@
 import React from 'react'
 import { useOrderContext } from '../Context/OrderContext'
+import './_Product.scss'
 
-const Product = ({image, name, price, product}) => {
-
-  const { addProductToOrder, order } = useOrderContext()
-
-  // console.log(order)
+const Product = (props) => {
+  const { addProductToOrder } = useOrderContext()
 
   return (
-    <div>
-      <img src={image} />
-      <h3>{name}</h3>
-      <p>{price}</p>
-      <button onClick={() => addProductToOrder(product)} >Agregar</button>
+    <div className='product'>
+      <img src={props.image} className='product_img' />
+      <h3 className='product_h3'>{props.name}</h3>
+      <div className='product_div'>
+        <p className='product_div_p'>${parseFloat(props.price).toLocaleString("es")}</p>
+        <button onClick={() => addProductToOrder(props.product)} className='product_div_button' >Agregar</button>
+      </div>
     </div>
   )
 }
 
-export default Product
+export default Product;

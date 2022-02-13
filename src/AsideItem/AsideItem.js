@@ -1,21 +1,21 @@
-import React, { useState } from 'react'
-import './_AsideItem.scss'
-import { useOrderContext } from '../Context/OrderContext'
+import React from 'react';
+import { useOrderContext } from '../Context/OrderContext';
+import AsideMessage from './AsideMessage/AsideMessage';
+import AsideProduct from './AsideProduct/AsideProduct';
+import './_AsideItem.scss';
 
 const AsideItem = (props) => {
-  const { getProducts } = useOrderContext()
-
-  
+ const { order } = useOrderContext()
 
   return (
-    <div className='asideItem' onClick={() => getProducts(props.fetch)}>
-        <img src={props.img} className='asideItem_img'/>
-        <div className='asideItem_div'>
-            <h3 className='asideItem_h3'>{props.h3}</h3>
-            <p className='asideItem_p'>{props.p}</p>
-        </div>
-    </div>
+    <>
+    {
+      order.find(e => e.category === props.category)
+      ? <AsideProduct fetch={props.category} />
+      : <AsideMessage img={props.img} h3={props.h3} p={props.p} category={props.category} />
+    }    
+    </>
   )
 }
 
-export default AsideItem
+export default AsideItem;
