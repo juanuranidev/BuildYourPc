@@ -1,12 +1,21 @@
 import React from 'react'
 import AsideItem from '../AsideItem/AsideItem'
 import './_Aside.scss'
+import { useOrderContext } from '../Context/OrderContext'
 
 const Aside = () => {
+  const {order} = useOrderContext()
+
   return (
     <div className='aside'>
       <h1>Aside</h1>
+      {
+        order.find(e => e.category === 'microprocesador')
+        ? console.log("contiene")
+        : console.log("no contiene")
+      }
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/micro.png'} h3={'Microprocesador'} p={'Todavia no seleccionaste un microprocesador'} fetch={'microprocesador'} />
+      
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/motherboard.png'} h3={'Motherboard'} p={'Todavia no seleccionaste una motherboard'} fetch={'motherboard'} />
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/ram.png'} h3={'Memoria Ram'} p={'Todavia no seleccionaste una memoria ram'} />
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/hdd.png'} h3={'Disco Duro'} p={'Todavia no seleccionaste un disco duro'} />

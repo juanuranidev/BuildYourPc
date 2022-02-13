@@ -9,9 +9,18 @@ export function useOrderContext() {
 
 export const OrderContextProvider = ({children}) => {
     const [data, setData] = useState([])
+    const [order, setOrder] = useState([])
     const [categoryToFetch, setCategoryToFetch] = useState()
-   
-    // console.log(categoryToFetch)
+    
+
+    const addProductToOrder = (product) => {
+        setOrder([...order, product])
+        console.log(order)
+    }
+
+
+
+
     const getProducts = (categoryToFetch) => {
         console.log('getting products')
         console.log(categoryToFetch)
@@ -28,9 +37,12 @@ export const OrderContextProvider = ({children}) => {
         <OrderContext.Provider value={{
            data,
            setData,
+           order,
+           setOrder,
            categoryToFetch,
            setCategoryToFetch,
-           getProducts
+           getProducts,
+           addProductToOrder
         }}>
             {children}
         </OrderContext.Provider>
