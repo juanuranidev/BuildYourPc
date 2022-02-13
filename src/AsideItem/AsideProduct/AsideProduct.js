@@ -10,9 +10,13 @@ const AsideProduct = (props) => {
       <div className='asideProduct' onClick={() => getProducts(props.fetch)}>
           <img src={productToFind.image} className='asideProduct_img'/>
           <div className='asideProduct_div'>
-              <h3 className='asideProduct_h3'>{props.fetch}</h3>
-              <p className='asideProduct_p'>{productToFind.name}</p>
-              <p className='asideProduct_p'>${(productToFind.price).toLocaleString("es")}</p>
+            <div>
+                <h3 className='asideProduct_h3'>{props.fetch}</h3>
+                <button>X</button>
+                <i className="fa-solid fa-xmark"></i>
+            </div>
+            <p className='asideProduct_p'>{productToFind.name}</p>
+            <p className='asideProduct_p'>${(productToFind.price).toLocaleString("es")}</p>
           </div>
       </div>
     )
