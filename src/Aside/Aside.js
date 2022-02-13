@@ -6,8 +6,8 @@ const Aside = () => {
   return (
     <div className='aside'>
       <h1>Aside</h1>
-      <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/micro.png'} h3={'Microprocesador'} p={'Todavia no seleccionaste un microprocesador'} />
-      <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/motherboard.png'} h3={'Motherboard'} p={'Todavia no seleccionaste una motherboard'} />
+      <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/micro.png'} h3={'Microprocesador'} p={'Todavia no seleccionaste un microprocesador'} fetch={'microprocesador'} />
+      <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/motherboard.png'} h3={'Motherboard'} p={'Todavia no seleccionaste una motherboard'} fetch={'motherboard'} />
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/ram.png'} h3={'Memoria Ram'} p={'Todavia no seleccionaste una memoria ram'} />
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/hdd.png'} h3={'Disco Duro'} p={'Todavia no seleccionaste un disco duro'} />
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/ssd.png'} h3={'Disco SSD'} p={'Todavia no seleccionaste un disco SSD'} />
