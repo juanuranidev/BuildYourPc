@@ -1,7 +1,7 @@
 import React from 'react';
 import { useOrderContext } from '../Context/OrderContext';
-import AsideMessage from './AsideMessage/AsideMessage';
-import AsideProduct from './AsideProduct/AsideProduct';
+import AsideMessage from '../AsideMessage/AsideMessage';
+import AsideProduct from '../AsideProduct/AsideProduct';
 import './_AsideItem.scss';
 
 const AsideItem = (props) => {

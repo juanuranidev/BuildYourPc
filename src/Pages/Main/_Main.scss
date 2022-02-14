@@ -1,6 +1,58 @@
 .main{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
     margin: auto;
+    background-color: #E8F1F5;
+    .mainContent{
+        .mainContent_div{
+            background-color: #ffffff;
+            padding: 1rem;
+            border-bottom-left-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+            margin: 0rem 1rem;
+            .mainContent_div_h1{
+                margin-bottom: 1rem; 
+            }  
+            .divOrderInfo{
+                display: flex;
+                flex-direction: column;
+                .divOrderInfo_p{
+                    font-size: 1rem;
+                    margin-bottom: 1rem;
+                    font-weight: 600;
+                }
+            }
+            .divWarning{
+                margin-bottom: 1rem;
+                .divWarning_p{
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+            .divButtons{
+                .divButtons_button{
+                    background-color: #005691;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 0.25rem;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+                .divButtons_resetButton{
+                    background-color: #ffffff;
+                    color: #005691;
+                    border: 1px solid #005691;;
+                    border-radius: 0.25rem;
+                    padding: 0.5rem;
+                    margin-right: 1rem;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

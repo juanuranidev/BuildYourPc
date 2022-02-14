@@ -1,8 +1,10 @@
 .product{
+    display: flex;
+    flex-direction: column;
     width: 15rem;
     background-color: #ffffff;
     border-radius: 0.25rem;
-    margin: 1rem;
+    margin: 0rem 0.5rem;
     .product_img{
         width: 100%;
         margin-bottom: 0.5rem;
