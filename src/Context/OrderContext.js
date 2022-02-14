@@ -19,8 +19,7 @@ export const OrderContextProvider = ({children}) => {
         getDocs(queryCollection)
           .then(res => setData(res.docs.map(prod => ({id: prod.id, ...prod.data()}))))
           .catch(err => console.log(err))
-        //   .finally(() => )
-        
+        //   .finally(() => )     
     }
 
     const addProductToOrder = (product) => {

@@ -1,4 +1,5 @@
 # Build your own pc
+Website to build your pc and get the total price. Ideal for a gamer store.
 
 # Demo
 https://buildyourpc.netlify.app/
@@ -10,8 +11,17 @@ https://buildyourpc.netlify.app/
 <img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" alt="netlify">
 
 # Features
+Select each part of the pc<br>
+Total price is updated every time you add, remove or change a product
 
 # Libraries
+**Firebase for database 9.6.6**<br>
+npm install firebase<br>
+https://firebase.google.com/docs/web/setup?hl=es
+
+**SASS for styles 1.49.7**<br>
+npm install sass<br>
+https://create-react-app.dev/docs/adding-a-sass-stylesheet/
 
 # Data
 Products stolen from: <a href="https://www.venex.com.ar" target="_blank">Venex</a> ❤️
@@ -20,4 +30,4 @@ Products stolen from: <a href="https://www.venex.com.ar" target="_blank">Venex</
 https://juanuranidev.github.io/portfolio/
 
 # My LinkedIn
-https://www.linkedin.com/in/juanurani/
+<a href="https://www.linkedin.com/in/juanurani/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
