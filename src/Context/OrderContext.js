@@ -8,18 +8,21 @@ export function useOrderContext() {
 }
 
 export const OrderContextProvider = ({children}) => {
+    const [intelOrAmd, setIntelOrAmd] = useState(null)
     const [data, setData] = useState([])
+    const [loader, setLoader] = useState()
     const [order, setOrder] = useState([])
     const [totalPrice, setTotalPrice] = useState()
     const [categoryToFetch, setCategoryToFetch] = useState()
 
     const getProducts = (categoryToFetch) => {
+        setLoader(true)
         const dataBase = getFirestore()
         const queryCollection = query(collection(dataBase, 'products'), where('category', '==', `${categoryToFetch}`))
         getDocs(queryCollection)
           .then(res => setData(res.docs.map(prod => ({id: prod.id, ...prod.data()}))))
           .catch(err => console.log(err))
-        //   .finally(() => ())     
+          .finally(() => setLoader(false))     
     }
 
     const addProductToOrder = (product, amount) => {
@@ -35,6 +38,12 @@ export const OrderContextProvider = ({children}) => {
         setOrder([...order.filter(x => x.id !== product.id)])
     }
 
+    const handleSetBrand = (brand) => {
+        setIntelOrAmd(brand)
+        getProducts(`microprocesador${brand}`)
+        setOrder([])
+    }
+
     useEffect(() => {
         const totalPrice = order.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
         setTotalPrice(totalPrice)
@@ -42,17 +51,22 @@ export const OrderContextProvider = ({children}) => {
 
     return(
         <OrderContext.Provider value={{
-           data,
-           setData,
-           order,
-           setOrder,
-           totalPrice,
-           setTotalPrice,
-           categoryToFetch,
-           setCategoryToFetch,
-           getProducts,
-           addProductToOrder,
-           deleteProductFromOrder
+            intelOrAmd,
+            setIntelOrAmd,
+            data,
+            loader,
+            setLoader,
+            setData,
+            order,
+            setOrder,
+            totalPrice,
+            setTotalPrice,
+            categoryToFetch,
+            setCategoryToFetch,
+            getProducts,
+            addProductToOrder,
+            deleteProductFromOrder,
+            handleSetBrand
         }}>
             {children}
         </OrderContext.Provider>

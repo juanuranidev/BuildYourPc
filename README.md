@@ -1,5 +1,5 @@
 # Build your own pc
-Website to build your pc and get the total price. Ideal for a gamer store.
+website to build your own computer and get a detailed quote in real time. Ideal for a gamer store.
 
 # Demo
 https://buildyourpc.netlify.app/
@@ -12,6 +12,7 @@ https://buildyourpc.netlify.app/
 
 # Features
 Select each part of the pc<br>
+select the quantity you want of each item<br>
 Total price is updated every time you add, remove or change a product
 
 # Libraries

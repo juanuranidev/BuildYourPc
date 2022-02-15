@@ -1,16 +1,20 @@
-import React from 'react'
-import Aside from '../Aside/Aside'
-import { useOrderContext } from '../Context/OrderContext'
-import Products from '../Products/Products'
-import './_Main.scss'
+import React from 'react';
+import Aside from '../Aside/Aside';
+import { useOrderContext } from '../Context/OrderContext';
+import PageLoader from '../PageLoader/PageLoader';
+import Products from '../Products/Products';
+import SelectBrand from '../SelectBrand/SelectBrand';
+import './_Main.scss';
 
 
 const Main = () => {
-  const { order, setOrder, totalPrice } = useOrderContext()
+  const { order, setOrder, totalPrice, loader, intelOrAmd } = useOrderContext()
+
+
 
   return (
     <div className='main'>
-        <Aside />
+      <Aside />
         <div className='mainContent'>
           <div className='mainContent_div'>
             <h1 className='mainContent_div_h1'>Crea la pc que tanto querés, a tu medida.</h1>   
@@ -23,15 +27,24 @@ const Main = () => {
             </div>
             <div className='divButtons'>
               {order.length!==13
-              ? <button className='divButtons_button'>No podés finalizar la compra</button>
+              ? <button className='divButtons_button opacity' onClick={() => console.log("no podes finalizar la compra")}>Finalizar Compra</button>
               : <button className='divButtons_button' onClick={() => console.log("finalizando armado...")}>Finalizar armado</button>}    
               <button  className='divButtons_resetButton' onClick={() => setOrder([])} >Reiniciar Configuración</button>
             </div>
           </div>
-          <Products />
+          {
+            intelOrAmd===null
+            ? <div className='divBrand'>
+              <h2 className='divBrand_h2'>Primero selecciona una marca</h2>
+              <SelectBrand />
+            </div>
+            :<>
+            {loader
+            ? <PageLoader />
+            : <Products />}</>}       
         </div>
     </div>
   )
 }
 
-export default Main
+export default Main;

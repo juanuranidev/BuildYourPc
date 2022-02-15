@@ -44,6 +44,9 @@
                     font-weight: 500;
                     cursor: pointer;
                 }
+                .divButtons_button:active{
+                    transform: scale(.95);
+                }
                 .divButtons_resetButton{
                     background-color: #ffffff;
                     color: #005691;
@@ -55,7 +58,20 @@
                     font-size: 1rem;
                     cursor: pointer;
                 }
+                .opacity{
+                    opacity: .4;
+                }
             }
+        }
+    }
+    .divBrand{
+        text-align: center;
+        padding: 1rem 1rem 0rem 1rem;
+        background-color: #ffffff;
+        margin-top: 0.5rem;
+        .divBrand_h2{
+            font-size: 2rem;
+            margin-bottom: 1rem;
         }
     }
 }

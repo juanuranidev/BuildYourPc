@@ -3,10 +3,10 @@ import { useOrderContext } from '../Context/OrderContext';
 import './_AsideMessage.scss';
 
 const AsideMessage = (props) => {
-  const { getProducts } = useOrderContext()
+  const { getProducts, intelOrAmd } = useOrderContext()
 
   return (
-    <div className='asideMessage' onClick={() => getProducts(props.category)}>
+    <div className='asideMessage' onClick={intelOrAmd===null ?() => console.log("error") :() => getProducts(props.category)}>
         <img src={props.img} className='asideMessage_img'/>
         <div className='asideMessage_div'>
             <h3 className='asideMessage_h3'>{props.h3}</h3>

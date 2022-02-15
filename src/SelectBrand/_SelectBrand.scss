@@ -1,0 +1,34 @@
+.selectBrand{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+    .selectBrand_button_intel{
+        background-color: #0071c5;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        color: #ffffff;
+        margin: 0rem 0.5rem;
+        border: none;
+        cursor: pointer;
+    }
+    .selectBrand_button_intel:active{
+        transform: scale(.95);
+    }
+    .selectBrand_button_amd{
+        background-color: #ED1C24;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 1rem;
+        border-radius: 0.25rem;
+        color: #ffffff;
+        margin: 0rem 0.5rem;
+        border: none;
+        cursor: pointer;
+    }
+    .selectBrand_button_amd:active{
+        transform: scale(.95);
+    }
+}
