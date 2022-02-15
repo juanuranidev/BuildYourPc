@@ -19,15 +19,15 @@ export const OrderContextProvider = ({children}) => {
         getDocs(queryCollection)
           .then(res => setData(res.docs.map(prod => ({id: prod.id, ...prod.data()}))))
           .catch(err => console.log(err))
-        //   .finally(() => )     
+        //   .finally(() => ())     
     }
 
-    const addProductToOrder = (product) => {
+    const addProductToOrder = (product, amount) => {
         let isInOrder = order.find(prod => prod.category === product.category)
         if(isInOrder){
-            setOrder([...order.filter(x => x.category !== product.category), product])
+            setOrder([...order.filter(x => x.category !== product.category),{...product, quantity: amount}])
         } else {
-            setOrder([...order, product])
+            setOrder([...order,{...product, quantity: amount}])
         }
     }
 

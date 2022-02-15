@@ -8,14 +8,31 @@
     .product_img{
         width: 100%;
         height: 15rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
     .product_h3{
         color: #000000;
         text-align: center;
         font-size: 1rem;
         font-weight: 700;
-        margin: 0rem 0.5rem 0.5rem 0.5rem;
+        margin: 0rem 0.5rem 1rem 0.5rem;
+    }
+    .productCounter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0rem auto 1rem auto;
+        .productCounter_span{
+            color: #005691;
+            font-size: 1.5rem;
+        }
+        .productCounter_span:active{
+            transform: scale(.95);
+        }
+        .productCounter_p{
+            margin: auto 2rem;
+            font-weight: 600;
+        }
     }
     .product_div{
         display: flex;
@@ -33,6 +50,9 @@
             padding: 0.5rem;
             font-weight: 500;
             cursor: pointer;
+        }
+        .product_div_button:active{
+            transform: scale(.95);
         }
     }
 }

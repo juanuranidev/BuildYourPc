@@ -1,0 +1,12 @@
+import React from 'react';
+import './_Footer.scss';
+
+const Footer = () => {
+  return (
+    <footer className='footer'>
+        <p className='footer_p'>Made by <a href='https://juanuranidev.github.io/portfolio/' target='_blank' rel='noreferrer' className='footer_p_a'>Juan</a></p>
+    </footer>
+  )
+}
+
+export default Footer;

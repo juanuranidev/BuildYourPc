@@ -6,14 +6,16 @@ import { OrderContextProvider } from './Context/OrderContext';
 import Products from './Products/Products';
 import './_App.scss'
 import './Styles/_base.scss'
+import Footer from './Footer/Footer';
 
 getFirestoreApp()
 
 function App() {
   return (
-      <OrderContextProvider>
-        <Main />
-      </OrderContextProvider>
+    <OrderContextProvider>
+      <Main />
+      <Footer />
+    </OrderContextProvider>
   );
 }
 

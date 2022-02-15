@@ -8,7 +8,7 @@ const Products = () => {
 
   return (
     <div className='products'>
-        {data.map(product => <Product key={product.id} name={product.name} price={product.price} image={product.image} product={product} />)}
+        {data.map(product => <Product key={product.id} name={product.name} price={product.price} image={product.image} product={product} stock={product.stock} />)}
     </div>
   )
 }
