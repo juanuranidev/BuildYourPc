@@ -5,7 +5,6 @@ import './_Aside.scss'
 const Aside = () => {
   return (
     <div className='aside'>
-      <h1 className='aside_h1'>Productos</h1>
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/micro.png'} h3={'Microprocesador'} p={'No seleccionaste un microprocesador'} category={'microprocesador'} /> 
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/motherboard.png'} h3={'Motherboard'} p={'No seleccionaste una motherboard'} category={'motherboard'} /> 
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/ram.png'} h3={'Memoria Ram'} p={'No seleccionaste una memoria ram'} category={'memoriaram'} />

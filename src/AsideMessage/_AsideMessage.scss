@@ -1,11 +1,12 @@
 .asideMessage{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    margin: 1rem auto;
-    width: 100%;
+    margin-bottom: 1rem;
     background-color: #ffffff;
     padding: 0.5rem;
+    border-radius: 0.25rem;
+    height: 6rem;
     cursor: pointer;
     .asideMessage_img{
         height: 2.5rem;
@@ -18,13 +19,16 @@
         align-items: flex-start;
         .asideMessage_h3{
             margin: 0rem;
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-weight: 700;
         }
         .asideMessage_p{
             margin: 0rem;
             width: 10rem;
-            font-size: 1rem;
+            font-size: 0.8rem;
         }
     }
+}
+.asideMessage:active{
+    transform: scale(.95);
 }

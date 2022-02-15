@@ -30,4 +30,4 @@ Products stolen from: <a href="https://www.venex.com.ar" target="_blank">Venex</
 https://juanuranidev.github.io/portfolio/
 
 # My LinkedIn
-<a href="https://www.linkedin.com/in/juanurani/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+https://www.linkedin.com/in/juanurani/
