@@ -1,12 +1,10 @@
 import React from 'react';
-import Aside from './Aside/Aside';
-import Main from './Main/Main'
 import { getFirestoreApp } from './Firebase/DataBaseConfig';
 import { OrderContextProvider } from './Context/OrderContext';
-import Products from './Products/Products';
-import './_App.scss'
-import './Styles/_base.scss'
+import Main from './Main/Main';
 import Footer from './Footer/Footer';
+import './_App.scss';
+import './Styles/_base.scss';
 
 getFirestoreApp()
 

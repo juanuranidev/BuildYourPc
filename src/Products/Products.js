@@ -1,7 +1,7 @@
 import React from 'react'
 import './_Products.scss'
 import { useOrderContext } from '../Context/OrderContext'
-import Product from '../Product/Product'
+import Product from './Product/Product'
 
 const Products = () => {
   const { data } = useOrderContext()

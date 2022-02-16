@@ -1,5 +1,5 @@
 import React from 'react'
-import AsideItem from '../AsideItem/AsideItem'
+import AsideItem from './AsideItem/AsideItem'
 import './_Aside.scss'
 import BrandSelect from '../SelectBrand/SelectBrand'
 import { useOrderContext } from '../Context/OrderContext'
@@ -9,7 +9,7 @@ const Aside = () => {
 
   return (
     <div className='aside'>
-      <BrandSelect />
+      {intelOrAmd && <BrandSelect />}
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/micro.png'} h3={'Microprocesador'} p={'No seleccionaste un microprocesador'} category={intelOrAmd==='intel' ?'microprocesadorintel' : 'microprocesadoramd'} /> 
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/motherboard.png'} h3={'Motherboard'} p={'No seleccionaste una motherboard'} category={'motherboard'} /> 
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/ram.png'} h3={'Memoria Ram'} p={'No seleccionaste una memoria ram'} category={'memoriaram'} />

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { useOrderContext } from '../Context/OrderContext'
-import ProductCounter from '../ProductCounter/ProductCounter'
+import { useOrderContext } from '../../Context/OrderContext'
 import './_Product.scss'
 
 const Product = (props) => {

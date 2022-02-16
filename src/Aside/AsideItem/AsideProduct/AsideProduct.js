@@ -1,5 +1,5 @@
 import React from 'react';
-import { useOrderContext } from '../Context/OrderContext';
+import { useOrderContext } from '../../../Context/OrderContext';
 import './_AsideProduct.scss';
 
 const AsideProduct = (props) => {
