@@ -39,8 +39,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0rem 0.5rem 0.5rem 0.5rem;
+        margin: 0rem 0.5rem 1rem 0.5rem;
         .product_div_p{
+            font-size: 1.2rem;
             font-weight: 700;
         }
         .product_div_button{
@@ -48,9 +49,10 @@
             color: #ffffff;
             border: none;
             border-radius: 0.25rem;
-            padding: 0.5rem;
+            padding: 0.5rem 1rem;
             font-weight: 500;
             cursor: pointer;
+            font-size: 1rem;
         }
         .product_div_button:active{
             transform: scale(.95);

@@ -2,17 +2,14 @@
     display: none;
     color: #ffffff;
     text-align: center;
-    padding-bottom: 1rem;
     cursor: pointer;
+    width: 2rem;
+    margin: 0rem auto 1rem auto;
 }
-
-
 
 @media(max-width: 992px){
     .fas.fa-times.fa-2x.closeMenu{
-        display: block;
-        width: 2rem;
-        margin: auto;
+        display: block; 
     }
     .fas.fa-times.fa-2x.closeMenu:active{
         transform: scale(.95);

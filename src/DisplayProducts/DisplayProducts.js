@@ -1,6 +1,6 @@
-import React from 'react'
-import { useOrderContext } from '../Context/OrderContext'
-import './_DisplayProducts.scss'
+import React from 'react';
+import { useOrderContext } from '../Context/OrderContext';
+import './_DisplayProducts.scss';
 
 const DisplayProducts = () => {
     const { setOpenMenu } = useOrderContext()

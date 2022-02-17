@@ -21,10 +21,7 @@ const MainContent = ({setOrderFinished}) => {
           </div>
           <div className='divWarning'>
             <h3 className='divWarning_h3'>Atención</h3>
-            <div className='divWarning_div'>
-              <span className="fa fa-warning fa-2x divWarning_div_span" />
-              <p className='divWarning_div_p'>Es necesario que elijas una opción en todos los productos</p>
-            </div>
+            <p className='divWarning_p'>Es necesario que elijas una opción en todos los productos</p>
           </div>
           <div className='divButtons'>
             {order.length!==3
@@ -33,9 +30,6 @@ const MainContent = ({setOrderFinished}) => {
             <button  className='divButtons_resetButton' onClick={() => setOrder([])} >Reiniciar Configuración</button>
           </div>
         </div>
-        {/* <div className='divMenu'>
-          <button className='divMenu_button' onClick={() => setOpenMenu(true)}>Ver productos</button>
-        </div> */}
         {intelOrAmd===null
         ? <div className='divBrand'>
               <h2 className='divBrand_h2'>Primero selecciona una marca</h2>
