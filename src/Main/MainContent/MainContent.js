@@ -33,9 +33,9 @@ const MainContent = ({setOrderFinished}) => {
             <button  className='divButtons_resetButton' onClick={() => setOrder([])} >Reiniciar Configuración</button>
           </div>
         </div>
-        <div className='divMenu'>
+        {/* <div className='divMenu'>
           <button className='divMenu_button' onClick={() => setOpenMenu(true)}>Ver productos</button>
-        </div>
+        </div> */}
         {intelOrAmd===null
         ? <div className='divBrand'>
               <h2 className='divBrand_h2'>Primero selecciona una marca</h2>

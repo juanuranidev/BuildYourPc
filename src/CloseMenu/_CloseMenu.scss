@@ -6,12 +6,15 @@
     cursor: pointer;
 }
 
-.fas.fa-times.fa-2x.closeMenu:active{
-    transform: scale(.95);
-}
+
 
 @media(max-width: 992px){
     .fas.fa-times.fa-2x.closeMenu{
         display: block;
+        width: 2rem;
+        margin: auto;
+    }
+    .fas.fa-times.fa-2x.closeMenu:active{
+        transform: scale(.95);
     }
 }

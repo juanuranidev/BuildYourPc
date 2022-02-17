@@ -1,6 +1,6 @@
-import React from 'react'
-import './_CloseMenu.scss'
-import { useOrderContext } from '../Context/OrderContext'
+import React from 'react';
+import { useOrderContext } from '../Context/OrderContext';
+import './_CloseMenu.scss';
 
 const CloseMenu = () => {
   const { setOpenMenu } = useOrderContext()
