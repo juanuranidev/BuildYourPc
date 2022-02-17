@@ -3,10 +3,10 @@ import { useOrderContext } from '../../Context/OrderContext';
 import SelectBrand from '../../SelectBrand/SelectBrand';
 import PageLoader from '../../PageLoader/PageLoader';
 import Products from '../../Products/Products';
-import './_MainContent.scss'
+import './_MainContent.scss';
 
 const MainContent = ({setOrderFinished}) => {
-    const { order, setOrder, totalPrice, loader, intelOrAmd } = useOrderContext()
+    const { order, setOrder, totalPrice, loader, intelOrAmd, setOpenMenu } = useOrderContext()
 
     return (
     <div className='mainContent'>
@@ -32,6 +32,9 @@ const MainContent = ({setOrderFinished}) => {
             : <button className='divButtons_button' onClick={() => setOrderFinished(true)}>Finalizar armado</button>}    
             <button  className='divButtons_resetButton' onClick={() => setOrder([])} >Reiniciar Configuración</button>
           </div>
+        </div>
+        <div className='divMenu'>
+          <button className='divMenu_button' onClick={() => setOpenMenu(true)}>Ver productos</button>
         </div>
         {intelOrAmd===null
         ? <div className='divBrand'>

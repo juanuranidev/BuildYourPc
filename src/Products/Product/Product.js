@@ -3,7 +3,7 @@ import { useOrderContext } from '../../Context/OrderContext'
 import './_Product.scss'
 
 const Product = (props) => {
-  const { addProductToOrder } = useOrderContext()
+  const { addProductToOrder, setOpenMenu } = useOrderContext()
   const [amount, setAmount] = useState(1)   
 
   const handleDecrement = () => amount > 1 ? setAmount(prev => prev - 1) : console.log("error")
@@ -20,7 +20,7 @@ const Product = (props) => {
         </div>
       <div className='product_div'>
         <p className='product_div_p'>${parseFloat(props.price).toLocaleString("es")}</p>
-        <button onClick={() => addProductToOrder(props.product, amount)} className='product_div_button'>Agregar</button>
+        <button onClick={() =>{ addProductToOrder(props.product, amount); setOpenMenu(true)}} className='product_div_button'>Agregar</button>
       </div>
     </div>
   )

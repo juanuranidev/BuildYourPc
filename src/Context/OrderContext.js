@@ -8,6 +8,7 @@ export function useOrderContext() {
 }
 
 export const OrderContextProvider = ({children}) => {
+    const [openMenu, setOpenMenu] = useState(false)
     const [intelOrAmd, setIntelOrAmd] = useState(null)
     const [data, setData] = useState([])
     const [loader, setLoader] = useState()
@@ -56,6 +57,8 @@ export const OrderContextProvider = ({children}) => {
 
     return(
         <OrderContext.Provider value={{
+            openMenu,
+            setOpenMenu,
             intelOrAmd,
             setIntelOrAmd,
             data,

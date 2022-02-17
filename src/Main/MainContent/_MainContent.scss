@@ -3,7 +3,7 @@
     width: 60rem;
     .mainContent_div{
         background-color: #ffffff;
-        padding: 1rem;
+        padding: 1.5rem 1rem;
         border-radius: 0.25rem;
         text-align: center;
         .mainContent_div_h1{
@@ -72,6 +72,24 @@
             .opacity{
                 opacity: .4;
             }
+        }
+    }
+    .divMenu{
+        padding: 2rem 0rem 1rem 0rem;
+        text-align: center;
+        .divMenu_button{
+            background-color: #005691;
+            color: #ffffff;
+            border: none;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            font-size: 1rem;
+            margin-right: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .divMenu_button:active{
+            transform: scale(.95);
         }
     }
 }

@@ -1,14 +1,16 @@
-import React from 'react'
-import AsideItem from './AsideItem/AsideItem'
-import './_Aside.scss'
-import BrandSelect from '../SelectBrand/SelectBrand'
-import { useOrderContext } from '../Context/OrderContext'
+import React from 'react';
+import CloseMenu from '../CloseMenu/CloseMenu';
+import AsideItem from './AsideItem/AsideItem';
+import BrandSelect from '../SelectBrand/SelectBrand';
+import { useOrderContext } from '../Context/OrderContext';
+import './_Aside.scss';
 
 const Aside = () => {
-  const { intelOrAmd } = useOrderContext()
+  const { intelOrAmd, openMenu } = useOrderContext()
 
   return (
-    <div className='aside'>
+    <div className={openMenu===true ? 'aside active' : 'aside'}>
+      <CloseMenu />
       {intelOrAmd && <BrandSelect />}
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/micro.png'} h3={'Microprocesador'} p={'No seleccionaste un microprocesador'} category={intelOrAmd==='intel' ?'microprocesadorintel' : 'microprocesadoramd'} /> 
       <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/motherboard.png'} h3={'Motherboard'} p={'No seleccionaste una motherboard'} category={'motherboard'} /> 
