@@ -3,6 +3,7 @@ import { useOrderContext } from '../../Context/OrderContext';
 import SelectBrand from '../../SelectBrand/SelectBrand';
 import PageLoader from '../../PageLoader/PageLoader';
 import Products from '../../Products/Products';
+import './_MainContent.scss'
 
 const MainContent = ({setOrderFinished}) => {
     const { order, setOrder, totalPrice, loader, intelOrAmd } = useOrderContext()
@@ -10,13 +11,20 @@ const MainContent = ({setOrderFinished}) => {
     return (
     <div className='mainContent'>
         <div className='mainContent_div'>
-          <h1 className='mainContent_div_h1'>Crea la pc que tanto querés, a tu medida.</h1>   
+          <h1 className='mainContent_div_h1'>Crea la pc que tanto querés a tu medida</h1>   
           <div className='divOrderInfo'>
-            <p className='divOrderInfo_p'>Componentes: {order.length} de 13</p>
             <p className='divOrderInfo_p'>Total: ${parseInt(totalPrice).toLocaleString("es")}</p>
+            {intelOrAmd===null && <img className='divOrderInfo_img' src={'https://www.venex.com.ar/images/configurador_pc/pc-venex.png'} />}
+            {intelOrAmd==='intel' && <img className='divOrderInfo_img' src={'https://www.venex.com.ar/images/configurador_pc/pc-intel.png'} />}
+            {intelOrAmd==='amd' && <img className='divOrderInfo_img' src={'https://www.venex.com.ar/images/configurador_pc/pc-amd.png'} />}
+            <p className='divOrderInfo_p'>Componentes: {order.length} de 13</p>
           </div>
           <div className='divWarning'>
-            <p className='divWarning_p'>Atención: Es necesario que elijas una opción en todos los productos para poder realizar el armado de la computadora</p>
+            <h3 className='divWarning_h3'>Atención</h3>
+            <div className='divWarning_div'>
+              <span className="fa fa-warning fa-2x divWarning_div_span" />
+              <p className='divWarning_div_p'>Es necesario que elijas una opción en todos los productos</p>
+            </div>
           </div>
           <div className='divButtons'>
             {order.length!==3

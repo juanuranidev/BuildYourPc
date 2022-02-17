@@ -45,7 +45,12 @@ export const OrderContextProvider = ({children}) => {
     }
 
     useEffect(() => {
-        const totalPrice = order.map(item => item.price).reduce((prev, curr) => prev + curr, 0);
+        let totalPrice = 0
+        let totalProduct = 0
+        order.forEach(product => {
+            totalProduct = product.quantity * product.price
+            totalPrice += totalProduct
+        })
         setTotalPrice(totalPrice)
     }, [order])
 
