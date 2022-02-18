@@ -43,6 +43,7 @@ export const OrderContextProvider = ({children}) => {
         setIntelOrAmd(brand)
         getProducts(`microprocesador${brand}`)
         setOrder([])
+        setOpenMenu(false)
     }
 
     useEffect(() => {
@@ -63,7 +64,6 @@ export const OrderContextProvider = ({children}) => {
             setIntelOrAmd,
             data,
             loader,
-            setLoader,
             setData,
             order,
             setOrder,

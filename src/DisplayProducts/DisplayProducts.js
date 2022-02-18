@@ -3,7 +3,7 @@ import { useOrderContext } from '../Context/OrderContext';
 import './_DisplayProducts.scss';
 
 const DisplayProducts = () => {
-    const { setOpenMenu } = useOrderContext()
+    const { setOpenMenu } = useOrderContext() 
 
     return (
         <div className='displayProducts'>
@@ -12,4 +12,4 @@ const DisplayProducts = () => {
     )
 }
 
-export default DisplayProducts
+export default DisplayProducts;

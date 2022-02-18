@@ -6,7 +6,7 @@ import Products from '../../Products/Products';
 import './_MainContent.scss';
 
 const MainContent = ({setOrderFinished}) => {
-    const { order, setOrder, totalPrice, loader, intelOrAmd, setOpenMenu } = useOrderContext()
+    const { order, setOrder, totalPrice, loader, intelOrAmd } = useOrderContext()
 
     return (
     <div className='mainContent'>
@@ -25,17 +25,19 @@ const MainContent = ({setOrderFinished}) => {
           </div>
           <div className='divButtons'>
             {order.length!==3
-            ? <button className='divButtons_button opacity' onClick={() => console.log("no podes finalizar la compra")}>Finalizar Compra</button>
+            ? <button className='divButtons_button opacity' onClick={() => console.log("Toastify React for error")}>Finalizar Compra</button>
             : <button className='divButtons_button' onClick={() => setOrderFinished(true)}>Finalizar armado</button>}    
             <button  className='divButtons_resetButton' onClick={() => setOrder([])} >Reiniciar Configuración</button>
           </div>
         </div>
         {intelOrAmd===null
         ? <div className='divBrand'>
-              <h2 className='divBrand_h2'>Primero selecciona una marca</h2>
-              <SelectBrand />
+            <h2 className='divBrand_h2'>Primero selecciona una marca</h2>
+            <SelectBrand />
           </div>
-        : <>{loader ? <PageLoader /> : <Products />}</>}       
+        : <>
+            {loader ? <PageLoader /> : <Products />}
+          </>}       
     </div>
   )
 }

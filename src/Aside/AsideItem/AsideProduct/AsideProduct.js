@@ -3,15 +3,17 @@ import { useOrderContext } from '../../../Context/OrderContext';
 import './_AsideProduct.scss';
 
 const AsideProduct = (props) => {
-  const { order, getProducts, deleteProductFromOrder, setOpenMenu } = useOrderContext()
+  const { order, getProducts, setOpenMenu, deleteProductFromOrder } = useOrderContext()
   let productToFind = order.find(e => e.category === props.fetch)
+
+  const handleGetProducts = () => {
+    getProducts(props.fetch);
+    setOpenMenu(false);
+  }
 
   return (
     <div className='asideProduct'>
-        <div onClick={() =>{
-          getProducts(props.fetch);
-          setOpenMenu(false);
-        } } className='asideProduct_div'>   
+        <div onClick={() => handleGetProducts()} className='asideProduct_div'>   
           <img src={productToFind.image} className='asideProduct_div_img'/>
           <div className='asideProduct_div_div'>
             <h3 className='asideProduct_div_div_h3'>{props.fetch}</h3>

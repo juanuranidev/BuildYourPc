@@ -1,8 +1,8 @@
 import React, { useState  } from 'react';
+import OrderContent from './OrderContent/OrderContent';
 import Aside from '../Aside/Aside';
 import DisplayProducts from '../DisplayProducts/DisplayProducts';
 import MainContent from './MainContent/MainContent';
-import OrderContent from './OrderContent/OrderContent';
 import './_Main.scss';
 
 const Main = () => {
@@ -11,7 +11,7 @@ const Main = () => {
     if(orderFinished){
       return(
         <div className='main'>
-        <OrderContent setOrderFinished={setOrderFinished} />
+          <OrderContent setOrderFinished={setOrderFinished} />
         </div>
       )
     } 

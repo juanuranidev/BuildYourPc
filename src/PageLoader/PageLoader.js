@@ -1,5 +1,5 @@
-import React from 'react'
-import './_PageLoader.scss'
+import React from 'react';
+import './_PageLoader.scss';
 
 const PageLoader = () => {
   return (
@@ -7,4 +7,4 @@ const PageLoader = () => {
   )
 }
 
-export default PageLoader
+export default PageLoader;

@@ -1,12 +1,12 @@
 import React from 'react';
-import CloseMenu from '../CloseMenu/CloseMenu';
-import AsideItem from './AsideItem/AsideItem';
-import BrandSelect from '../SelectBrand/SelectBrand';
 import { useOrderContext } from '../Context/OrderContext';
+import CloseMenu from '../CloseMenu/CloseMenu';
+import BrandSelect from '../SelectBrand/SelectBrand';
+import AsideItem from './AsideItem/AsideItem';
 import './_Aside.scss';
 
 const Aside = () => {
-  const { intelOrAmd, openMenu } = useOrderContext()
+  const { openMenu, intelOrAmd } = useOrderContext()
 
   return (
     <div className={openMenu===true ? 'aside active' : 'aside'}>
@@ -29,4 +29,4 @@ const Aside = () => {
   )
 }
 
-export default Aside
+export default Aside;
