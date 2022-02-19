@@ -21,3 +21,17 @@
             }
     }
 }
+
+@media(max-width: 992px){
+    .orderProduct{
+        padding: 1rem auto;
+            .orderProduct_image{
+                width: 25%;
+                height: 5rem;
+                margin-right: 0.5rem;
+            }
+            .orderProduct_info{
+                width: 75%;
+        }
+    }
+}

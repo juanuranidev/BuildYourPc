@@ -65,3 +65,40 @@
         }
     }
 }
+
+@media(max-width: 992px){
+    .orderContent{
+        width: 100%;
+        .orderContent_div{
+            .orderContent_div_h1{
+                font-size: 1.8rem;
+                margin: 0rem auto 1.5rem auto;
+            }
+            .separateContent{
+                flex-direction: column;
+                text-align: center;
+                .divOrderInfo{
+                    flex-direction: column;
+                    margin-right: 0rem;           
+                    .divOrderInfo_img{
+                        margin-right: 0rem;
+                        margin: 0rem auto 1rem auto;
+                    }
+                    .divOrderInfo_div{
+                        width: 100%;
+                        margin-bottom: 1rem;
+                    }
+                    .divOrderInfo_h3{
+                        font-size: 1.2rem;
+                        text-align: center;
+                    }
+                    .divOrderInfo_p{
+                        font-size: 1rem;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
