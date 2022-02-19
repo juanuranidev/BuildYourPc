@@ -1,5 +1,5 @@
 # Build your own pc
-website to build your own computer and get a detailed quote in real time. Ideal for a gamer store.
+Website to build your own computer and get a detailed quote in real time. Ideal for a gamer store.
 
 # Demo
 https://buildyourpc.netlify.app/
