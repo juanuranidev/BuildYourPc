@@ -12,7 +12,7 @@ https://buildyourpc.netlify.app/
 
 # Features
 Select each part of the pc<br>
-select the quantity you want of each item<br>
+Select the quantity you want of each item<br>
 Total price is updated every time you add, remove or change a product
 
 # Libraries

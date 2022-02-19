@@ -1,7 +1,7 @@
-import React from 'react'
-import './_Products.scss'
-import { useOrderContext } from '../Context/OrderContext'
-import Product from './Product/Product'
+import React from 'react';
+import { useOrderContext } from '../Context/OrderContext';
+import Product from './Product/Product';
+import './_Products.scss';
 
 const Products = () => {
   const { data } = useOrderContext()
@@ -13,4 +13,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default Products;
