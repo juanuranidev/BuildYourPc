@@ -11,9 +11,11 @@ https://buildyourpc.netlify.app/
 <img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" alt="netlify">
 
 # Features
+Select the type of the pc (Intel or AMD)<br>
 Select each part of the pc<br>
 Select the quantity you want of each item<br>
-Total price is updated every time you add, remove or change a product
+Total price is updated every time you add, remove or change a product<br>
+Get a pdf of your quote
 
 # Libraries
 **Firebase for database 9.6.6**<br>
