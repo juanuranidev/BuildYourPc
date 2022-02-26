@@ -4,7 +4,6 @@ import { OrderContextProvider } from './Context/OrderContext';
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
 import './_App.scss';
-import './Styles/_base.scss';
 
 getFirestoreApp()
 

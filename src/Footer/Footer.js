@@ -4,7 +4,7 @@ import './_Footer.scss';
 const Footer = () => {
   return (
     <footer className='footer'>
-        <p className='footer_p'>Made by <a href='https://juanuranidev.github.io/portfolio/' target='_blank' rel='noreferrer' className='footer_p_a'>Juan</a></p>
+        <p className='footer_p'> Made with <span className='fa fa-heart footer_p_span'/> by <a href='https://juanurani.netlify.app/' target='_blank' rel='noopener noreferrer' className='footer_p_a'>Juan</a></p>
     </footer>
   )
 }

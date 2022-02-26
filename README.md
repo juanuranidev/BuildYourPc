@@ -30,7 +30,7 @@ https://create-react-app.dev/docs/adding-a-sass-stylesheet/
 Products stolen from: <a href="https://www.venex.com.ar" target="_blank">Venex</a> ❤️
 
 # My Portfolio
-https://juanuranidev.github.io/portfolio/
+https://juanurani.netlify.app/
 
 # My LinkedIn
 https://www.linkedin.com/in/juanurani/
