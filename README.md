@@ -15,7 +15,6 @@ Select the type of pc you want (Intel or AMD)<br>
 Select each part of the pc<br>
 Select the quantity you want of each item<br>
 Total price is updated every time you add, remove or change a product<br>
-Get a pdf of your quote
 
 # Libraries
 **Firebase for database 9.6.6**<br>
