@@ -4,7 +4,6 @@ import { OrderContextProvider } from './Context/OrderContext';
 import Main from './Main/Main';
 import Footer from './Footer/Footer';
 import './_App.scss';
-import Pdf from './Pdf/Pdf'
 
 getFirestoreApp()
 
@@ -13,7 +12,6 @@ function App() {
     <OrderContextProvider>
       <Main />
       <Footer />
-      <Pdf/>
     </OrderContextProvider>
   );
 }
