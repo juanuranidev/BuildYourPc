@@ -1,0 +1,19 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #005691;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    .footer_p{
+        color: #ffffff;
+        font-weight: 600;
+        .footer_p_span{
+            color: #b6332b;
+        }
+        .footer_p_a{
+            color: #ffffff;
+            font-size: 700;
+        }  
+    }
+}

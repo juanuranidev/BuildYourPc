@@ -1,0 +1,31 @@
+.displayProducts{
+    display: none;
+}
+
+@media(max-width: 992px){
+    .displayProducts{
+        display: block;
+        position: fixed;
+        background-color: #005691;
+        width: 100%;
+        top: 0rem;
+        text-align: center;
+        padding: 1rem;
+        z-index: 1;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        .divMenu_button{
+            position: relative;
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .divMenu_button:active{
+            transform: scale(.95);
+        }
+    }
+}

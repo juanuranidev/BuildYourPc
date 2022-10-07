@@ -1,0 +1,35 @@
+.asideMessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    height: 6rem;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    cursor: pointer;
+    .asideMessage_img{
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 1rem;
+    }
+    .asideMessage_div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .asideMessage_h3{
+            margin: 0rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .asideMessage_p{
+            margin: 0rem;
+            width: 10rem;
+            font-size: 0.8rem;
+        }
+    }
+}
+.asideMessage:active{
+    transform: scale(.95);
+}

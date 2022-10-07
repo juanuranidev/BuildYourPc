@@ -1,0 +1,186 @@
+.mainContent{
+    padding: 0rem 0.5rem;
+    width: 50rem;
+    .mainContent_div{
+        background-color: #ffffff;
+        padding: 1.5rem 1rem;
+        border-radius: 0.25rem;
+        text-align: center;
+        .mainContent_div_h1{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }  
+        .divOrderInfo{
+            margin-bottom: 1.5rem;
+            .divOrderInfo_p{
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+                font-weight: 700;
+            }
+            .divOrderInfo_img{
+                width: 8rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+        .divWarning{
+            margin-bottom: 1.5rem;
+            .divWarning_h3{
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+            .divWarning_div_p{
+                font-size: 1rem;
+            }
+        }
+        .divButtons{
+            .divButtons_button{
+                background-color: #005691;
+                color: #ffffff;
+                border: none;
+                border-radius: 0.25rem;
+                padding: 0.5rem;
+                font-size: 1rem;
+                margin-right: 1rem;
+                font-weight: 500;
+                box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+                cursor: pointer;
+            }
+            .divButtons_button:active{
+                transform: scale(.95);
+            }
+            .divButtons_resetButton{
+                background-color: #ffffff;
+                color: #005691;
+                text-decoration: underline;
+                border: none;
+                border-radius: 0.25rem;
+                padding: 0.5rem;                   
+                font-weight: 500;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+            .opacity{
+                opacity: .4;
+            }
+        }
+    }
+}
+.divBrand{
+    text-align: center;
+    padding: 1rem 1rem 0rem 1rem;
+    background-color: #ffffff;
+    margin-top: 0.5rem;
+    .divBrand_h2{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media(max-width: 992px){
+    .mainContent{
+        margin-top: 6rem;
+        padding: 0rem 0.5rem;
+        .mainContent_div{
+            background-color: #ffffff;
+            padding: 1.5rem 1rem;
+            border-radius: 0.25rem;
+            text-align: center;
+            .mainContent_div_h1{
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }  
+            .divOrderInfo{
+                margin-bottom: 1.5rem;
+                .divOrderInfo_p{
+                    font-size: 1rem;
+                    margin-bottom: 0.5rem;
+                    font-weight: 700;
+                }
+                .divOrderInfo_img{
+                    width: 8rem;
+                    margin-bottom: 0.5rem;
+                }
+            }
+            .divWarning{
+                margin-bottom: 1.5rem;
+                .divWarning_h3{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                }
+                .divWarning_div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 0.5rem;
+                    .divWarning_div_span{
+                        color:  #CC3333;
+                        margin-right: 0.5rem;
+                    }
+                    .divWarning_div_p{
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            .divButtons{
+                .divButtons_button{
+                    background-color: #005691;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 0.25rem;
+                    padding: 0.5rem;
+                    font-size: 1rem;
+                    margin-right: 1rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+                .divButtons_button:active{
+                    transform: scale(.95);
+                }
+                .divButtons_resetButton{
+                    background-color: #ffffff;
+                    color: #005691;
+                    text-decoration: underline;
+                    border: none;
+                    border-radius: 0.25rem;
+                    padding: 0.5rem;                   
+                    font-weight: 500;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+                .opacity{
+                    opacity: .4;
+                }
+            }
+        }
+        .divMenu{
+            padding: 2rem 0rem 1rem 0rem;
+            text-align: center;
+            .divMenu_button{
+                background-color: #005691;
+                color: #ffffff;
+                border: none;
+                border-radius: 0.25rem;
+                padding: 1rem;
+                font-size: 1rem;
+                margin-right: 1rem;
+                font-weight: 500;
+                cursor: pointer;
+            }
+            .divMenu_button:active{
+                transform: scale(.95);
+            }
+        }
+    }
+    .divBrand{
+        text-align: center;
+        padding: 1rem 1rem 0rem 1rem;
+        background-color: #ffffff;
+        margin-top: 0.5rem;
+        .divBrand_h2{
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
