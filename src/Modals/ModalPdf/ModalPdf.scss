@@ -1,0 +1,29 @@
+.modalPdf{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #ffffff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 15px -3px rgb(0 0 0 / 10%);
+    z-index: 10;
+    padding: 1rem;
+    .modalPdf_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0.5rem;
+        .modalPdf_title_p{
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    .modalPdf_viewer{
+        height: 80vh;
+        width: 80vh;
+    }
+}

@@ -1,0 +1,16 @@
+.modalBackground{
+    visibility: hidden;
+    opacity: 0;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+}
+.modalBackground_visible{
+    @extend .modalBackground;
+    visibility: visible;
+    opacity: 0.5;
+    transition: opacity .5s ease-in-out, visibility .5s ease-in-out;
+}

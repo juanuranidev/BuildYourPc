@@ -24,7 +24,7 @@ const MainContent = ({setOrderFinished}) => {
             <p className='divWarning_p'>Es necesario que elijas una opción en todos los productos</p>
           </div>
           <div className='divButtons'>
-            {order.length!==13
+            {order.length < 1
             ? <button className='divButtons_button opacity' onClick={() => console.log("Toastify React for error")}>Finalizar Compra</button>
             : <button className='divButtons_button' onClick={() => setOrderFinished(true)}>Finalizar armado</button>}    
             <button  className='divButtons_resetButton' onClick={() => setOrder([])} >Reiniciar Configuración</button>
