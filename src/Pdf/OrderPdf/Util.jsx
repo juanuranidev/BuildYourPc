@@ -93,3 +93,9 @@ export const getTotal = (products) => {
 
     return total.toLocaleString("ES-ar")
 }
+
+export const setExpiredDate = () => {
+    const date = new Date();
+    
+    return date.setDate(date.getDate() + 7);
+}
