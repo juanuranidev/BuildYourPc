@@ -1,13 +1,5 @@
 import { Text, StyleSheet } from '@react-pdf/renderer';
 
-export const DividerPDF = () => {
-    return <Text style={divider_styles.divider}>____________________________________________________________</Text>
-}
-
-export const PagesPDF = () => {
-    return <Text style={pages_styles.pages} render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} fixed/>
-}
-
 const divider_styles = StyleSheet.create({
     divider: {
         color: '#eeeeee',
@@ -23,6 +15,7 @@ const pages_styles = StyleSheet.create({
         justifyContent: "center",
         fontSize: 10,
         textAlign: "center",
+        marginTop: 10,
     }
 })
 
@@ -72,29 +65,31 @@ export const product_styles = StyleSheet.create({
     }
 });
 
-// export const total_styles = StyleSheet.create({
-//     total: {
-//         // border: "1px solid #000000",
-//         // padding: 10,
-//         // marginTop: 10,
-//         // width: 600,
-//         // textAlign: "right"
-//     },
-//     totalText: {
-//         fontSize: 8,
-//         color: "red",
-//     }
-// })
-
 export const total_styles = StyleSheet.create({
     total: {
         border: "1px solid #000000",
         paddingRight: 25,
-        marginTop: 5,
         width: "100%",
         textAlign: "right",
+        paddingTop: 5,
+        paddingBottom: 5,
     },
     totalText: {
-        fontSize: 14,
+        fontSize: 10,
     }
 })
+
+export const DividerPDF = () => {
+    return <Text style={divider_styles.divider}>____________________________________________________________</Text>
+}
+
+export const PagesPDF = () => {
+    return <Text style={pages_styles.pages} render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`} fixed/>
+}
+
+export const getTotal = (products) => {
+    let total = 0
+    products.forEach(product => total = total + (product.quantity * product.price))
+
+    return total.toLocaleString("ES-ar")
+}

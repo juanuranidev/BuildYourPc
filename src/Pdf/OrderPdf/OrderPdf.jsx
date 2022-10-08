@@ -1,6 +1,6 @@
 import React from 'react'
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import { product_styles, table_styles, total_styles } from './Util';
+import { PagesPDF, product_styles, table_styles, total_styles, getTotal} from './Util';
 
 const page_styles = StyleSheet.create({
   page: {
@@ -16,7 +16,7 @@ export default function OrderPdf({products}) {
   console.log(products)
   return (
     <Document>
-    <Page size="A4" style={page_styles.page}>
+    <Page size="A4" style={page_styles.page} wrap>
       <View>
         <Text style={page_styles.tableTitle}>
           Detalles del presupuesto:
@@ -63,17 +63,13 @@ export default function OrderPdf({products}) {
           </View>
           )
         })}
-        {/* <View styles={total_styles.total} debug>
-        <View>
-          <Text styles={total_styles.totalText}>
-            Total: $123.413.123,23
+        <View style={total_styles.total}>
+          <Text style={total_styles.totalText}>
+            Total: ${getTotal(products)}
           </Text>
         </View>
-        </View> */}
-        <View style={total_styles.total}>
-        <Text style={total_styles.totalText}>
-          Total: $123.123.123,12
-        </Text>
+        <View fixed>
+          <PagesPDF/>
         </View>
       </View>
     </Page>
