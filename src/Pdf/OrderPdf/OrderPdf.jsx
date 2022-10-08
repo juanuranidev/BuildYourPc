@@ -2,10 +2,19 @@ import React from 'react'
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer';
 import { PagesPDF, product_styles, table_styles, total_styles, getTotal, setExpiredDate} from './Util';
 import Logo from '../../Assets/Logo.png'
+import moment from "moment"
 
 const page_styles = StyleSheet.create({
   page: {
     padding: 10,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+  },
+  pageTitle: {
+    width: "100%",
+    textAlign: "center",
+    paddingBottom: 20,
   },
   tableTitle: {
     fontSize: 10,
@@ -21,18 +30,18 @@ const page_styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   imageContainer: {
-    width: 80,
-    height: 50,
+    width: 100,
+    height: 80,
   }, 
   logoImage: {
     display: "flex",
-    height: 5,
-    width: 5,
+    height: 10,
+    width: 10,
     objectFit: 'fill',
   },
   textContainer: {
     border: "1px solid #000000",
-    padding: 10,
+    padding: 5,
   },
   textContent: {
     fontSize: 10,
@@ -45,24 +54,34 @@ export default function OrderPdf({products}) {
     <Document>
       <Page size="A4" style={page_styles.page} wrap>
         <View>
+          <View style={page_styles.pageTitle}>
+            <Text>
+              PRESUPUESTO PARA EL ARMADO DE TU PC
+            </Text>
+          </View>
           <View style={page_styles.firstContent}>
             <View style={page_styles.imageContainer}>
-                <Image src={Logo} styles={page_styles.logoImage} />
+              <Image  src={Logo} styles={page_styles.logoImage} />
             </View>
             <View style={page_styles.textContainer}>
               <View>
                 <Text style={page_styles.textContent}>
-                  Presupuesto número: #{(Math.random() * 1000000000).toFixed(0)}
+                  Presupuesto número: {(Math.random() * 1000000000).toFixed(0)}
                 </Text>
               </View>
               <View>
                 <Text style={page_styles.textContent}>
-                  Fecha: {new Date().toLocaleDateString("ES-ar")}
+                  Fecha de creación: {moment(new Date()).format("DD/MM/YYYY")}
                 </Text>
               </View>
               <View>
                 <Text style={page_styles.textContent}>
-                  Fecha vencimiento: {setExpiredDate()}
+                  Fecha de vencimiento: {setExpiredDate()}
+                </Text>
+              </View>
+              <View>
+                <Text style={page_styles.textContent}>
+                  email: armatupc@gmail.com
                 </Text>
               </View>
             </View>
@@ -123,10 +142,10 @@ export default function OrderPdf({products}) {
                 Entregar este presupuesto antes de la fecha de vencimiento.
               </Text>
             </View>
-            <View fixed>
-              <PagesPDF/>
-            </View>
           </View>
+        </View>
+        <View fixed>
+          <PagesPDF/>
         </View>
       </Page>
     </Document>

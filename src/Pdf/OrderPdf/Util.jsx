@@ -1,4 +1,5 @@
 import { Text, StyleSheet } from '@react-pdf/renderer';
+import moment from "moment"
 
 const divider_styles = StyleSheet.create({
     divider: {
@@ -95,7 +96,5 @@ export const getTotal = (products) => {
 }
 
 export const setExpiredDate = () => {
-    const date = new Date();
-    
-    return date.setDate(date.getDate() + 7);
+    return moment(new Date()).add(7, "days").format("DD/MM/YYYY")
 }
