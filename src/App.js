@@ -1,7 +1,7 @@
 import React from 'react';
 import { getFirestoreApp } from './Firebase/DataBaseConfig';
 import { OrderContextProvider } from './Context/OrderContext';
-import Main from './Main/Main';
+import Main from './Views/Main/Main';
 import Footer from './Footer/Footer';
 import './_App.scss';
 

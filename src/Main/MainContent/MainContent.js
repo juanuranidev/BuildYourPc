@@ -1,7 +1,7 @@
 import React from 'react';
 import { useOrderContext } from '../../Context/OrderContext';
 import SelectBrand from '../../SelectBrand/SelectBrand';
-import PageLoader from '../../PageLoader/PageLoader';
+import Loader from '../../Loader/PageLoader';
 import Products from '../../Products/Products';
 import './_MainContent.scss';
 
@@ -36,7 +36,7 @@ const MainContent = ({setOrderFinished}) => {
             <SelectBrand />
           </div>
         : <>
-            {loader ? <PageLoader /> : <Products />}
+            {loader ? <Loader /> : <Products />}
           </>}       
     </div>
   )
