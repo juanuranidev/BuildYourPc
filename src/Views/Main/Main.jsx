@@ -7,6 +7,7 @@ import ModalPdf from '../../Modals/ModalPdf/ModalPdf';
 import OrderPdf from '../../Pdf/OrderPdf/OrderPdf';
 import './Main.scss';
 import Categories from '../../Categories/Categories';
+import ModalProducts from '../../Modals/ModalProducts/ModalProducts';
 
 // const Main = () => {
 //   // const [orderFinished, setOrderFinished] = useState(false)
@@ -29,10 +30,13 @@ import Categories from '../../Categories/Categories';
 
 
 export default function Main() {
+
+
   return (
     <div style={{display: "flex", justifyContent: "center", minHeight: "100vh", padding: "2rem 0rem"}}>
-      <Categories/>
+      <Categories />
       <Aside/>
+      {/* <ModalProducts/> */}
     </div>
   )
 }
