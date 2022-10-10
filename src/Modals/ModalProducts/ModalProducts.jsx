@@ -38,10 +38,10 @@ export default function ModalProducts({ category, close }) {
       </div>
       <div className="modalProducts_content">
         {loader
-            ? <Loader />
-            : <div>
-                <Products data={products} />
-            </div>
+            ?   <Loader />
+            :   <div className="modalProducts_content_div">
+                    <Products data={products} close={close} />
+                </div>
         }
       </div>
     </div>
