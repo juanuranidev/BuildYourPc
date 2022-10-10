@@ -27,11 +27,12 @@
         height: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
         overflow-y: scroll;
         .modalProducts_content_div{
-            display: flex;
+            display: flex;;
+            justify-content: center;
             flex-wrap: wrap;
         }
     }
