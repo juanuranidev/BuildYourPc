@@ -3,7 +3,7 @@ import { useOrderContext } from '../../Context/OrderContext'
 import './Product.scss'
 
 const Product = ({product, key, close}) => {
-  const { addProductToOrder, setOpenMenu } = useOrderContext()
+  const { addProductToOrder } = useOrderContext()
   const [amount, setAmount] = useState(1)   
 
   const handleDecrement = () => amount > 1 ? setAmount(prev => prev - 1) : console.log("error")

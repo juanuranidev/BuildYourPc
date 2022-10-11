@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useOrderContext } from '../../Context/OrderContext'
 import ModalPdf from '../../Modals/ModalPdf/ModalPdf'
-import OrderProducts from '../../OrderProducts/OrderProducts'
+// import OrderProducts from '../../OrderProducts/OrderProducts'
 import './_OrderContent.scss'
 import OrderPdf from '../../Pdf/OrderPdf/OrderPdf'
 import ModalBackground from '../../Modals/ModalBackground/ModalBackground'
@@ -32,7 +32,7 @@ const OrderContent = ({setOrderFinished}) => {
             </div>
           </div>
         </div> 
-          <OrderProducts />
+          {/* <OrderProducts /> */}
       </div>
       {modalPdf && 
         <ModalPdf 
