@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useOrderContext } from '../../Context/OrderContext'
+import { useOrderContext } from '../../../Context/OrderContext'
 import './Product.scss'
 
 const Product = ({product, key, close}) => {
