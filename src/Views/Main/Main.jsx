@@ -1,6 +1,6 @@
 import React, { useState  } from 'react';
 import OrderContent from '../../Main/OrderContent/OrderContent';
-import Aside from '../../Aside/Aside';
+import Aside from './Aside/Aside';
 // import DisplayProducts from '../../DisplayProducts/DisplayProducts';
 import MainContent from '../../Main/MainContent/MainContent';
 // import ModalPdf from '../../Modals/ModalPdf/ModalPdf';
