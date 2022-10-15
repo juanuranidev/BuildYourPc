@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getFirestore, query, collection, where, getDocs } from "firebase/firestore";
-import Loader from "../../Loader/PageLoader";
-import Products from "../../Components/Products/Products";
+import Loader from "../../../Loader/PageLoader"
+import Products from "../../../Components/Products/Products";
 import "./ModalProducs.scss";
 
 export default function ModalProducts({ category, close }) {

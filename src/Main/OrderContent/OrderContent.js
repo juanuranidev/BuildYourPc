@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { useOrderContext } from '../../Context/OrderContext'
-import ModalPdf from '../../Modals/ModalPdf/ModalPdf'
+// import ModalPdf from '../../Modals/ModalPdf/ModalPdf'
 // import OrderProducts from '../../OrderProducts/OrderProducts'
 import './_OrderContent.scss'
 import OrderPdf from '../../Pdf/OrderPdf/OrderPdf'
-import ModalBackground from '../../Modals/ModalBackground/ModalBackground'
+// import ModalBackground from '../../Modals/ModalBackground/ModalBackground'
 
 const OrderContent = ({setOrderFinished}) => {
   const { order, totalPrice, intelOrAmd } = useOrderContext()
@@ -34,7 +34,7 @@ const OrderContent = ({setOrderFinished}) => {
         </div> 
           {/* <OrderProducts /> */}
       </div>
-      {modalPdf && 
+      {/* {modalPdf && 
         <ModalPdf 
           children={<OrderPdf products={order}/>}
           close={() => setModalPdf(false)}
@@ -43,7 +43,7 @@ const OrderContent = ({setOrderFinished}) => {
       <ModalBackground  
         open={modalPdf}
         close={() => setModalPdf(false)}
-      />
+      /> */}
     </React.Fragment>
   )
 }

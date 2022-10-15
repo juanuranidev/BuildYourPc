@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Category from './Category/Category'
-import ModalProducts from '../../Modals/ModalProducts/ModalProducts'
-import ModalBackground from '../../Modals/ModalBackground/ModalBackground'
+import ModalProducts from '../../../Components/Modals/ModalProducts/ModalProducts'
+import ModalBackground from '../../../Components/Modals/ModalBackground/ModalBackground'
 import './Categories.scss'
 
 export default function Categories() {

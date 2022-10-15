@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useOrderContext } from '../../../Context/OrderContext'
+import { useOrderContext } from '../../../../Context/OrderContext'
 import hdd from '../../../Assets/Categories/hdd.png'
 import './Category.scss'
 
