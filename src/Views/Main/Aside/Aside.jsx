@@ -29,10 +29,14 @@ const Aside = () => {
   // )
   return (
     <aside className='aside'>
-      <h2>Tu pedido</h2>
+      <div className='aside_title'>
+        <h2 className='aside_title_h2'>Tu pedido</h2>
+      </div>
       <p>Total: $123.123</p>
-      <button>Finalizar Pedido</button>
-      <p>Reiniciar Pedido</p>
+      <div className='aside_buttons'>
+        <button className='aside_buttons_button' onClick={() => console.log("test")}>FINALIZAR PEDIDO</button>
+        <p className='aside_buttons_p'>reiniciar Pedido</p>
+      </div>
     </aside>
   )
 }
