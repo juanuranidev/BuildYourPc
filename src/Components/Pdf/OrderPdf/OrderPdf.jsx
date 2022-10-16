@@ -1,7 +1,7 @@
 import React from 'react'
 import { Page, Text, View, Document, StyleSheet, Image } from '@react-pdf/renderer';
 import { PagesPDF, product_styles, table_styles, total_styles, getTotal, setExpiredDate} from './Util';
-import Logo from '../../Assets/Logo.png'
+import Logo from '../../../Assets/Logo.png'
 import moment from "moment"
 
 const page_styles = StyleSheet.create({

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useOrderContext } from '../../../../Context/OrderContext'
-import hdd from '../../../Assets/Categories/hdd.png'
+import hdd from '../../../../Assets/Categories/hdd.png'
 import './Category.scss'
 
 export default function Category({image, title, category, setCategory}) {

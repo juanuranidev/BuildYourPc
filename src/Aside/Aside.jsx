@@ -2,7 +2,7 @@ import React from 'react';
 import { useOrderContext } from '../../../Context/OrderContext';
 import CloseMenu from '../../../CloseMenu/CloseMenu';
 import BrandSelect from '../../../SelectBrand/SelectBrand';
-// import AsideItem from './AsideItem/AsideItem';
+import AsideItem from './AsideItem/AsideItem';
 import './Aside.scss';
 
 const Aside = () => {

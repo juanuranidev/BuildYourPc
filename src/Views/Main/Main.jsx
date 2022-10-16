@@ -4,7 +4,7 @@ import Aside from './Aside/Aside';
 // import DisplayProducts from '../../DisplayProducts/DisplayProducts';
 import MainContent from '../../Main/MainContent/MainContent';
 // import ModalPdf from '../../Modals/ModalPdf/ModalPdf';
-import OrderPdf from '../../Pdf/OrderPdf/OrderPdf';
+import OrderPdf from '../../Components/Pdf/OrderPdf/OrderPdf';
 import './Main.scss';
 import Categories from "./Categories/Categories"
 // import ModalProducts from '../../Modals/ModalProducts/ModalProducts';
