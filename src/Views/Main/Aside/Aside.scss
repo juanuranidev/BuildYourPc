@@ -1,16 +1,50 @@
 .aside{
-    width: 20%;
+    width: 30%;
     background-color: #ffffff;
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
     height: 100%;
+    @media(max-width: 768px){
+        width: 90%;
+        margin: auto;
+        margin-top: 1rem;
+    }
     .aside_title{
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-        border-bottom: 0.1rem solid #747272;
+        margin-bottom: 2rem;
         .aside_title_h2{
 
+        }
+    }
+    .aside_products{
+        .aside_products_table{
+            .aside_products_tr{
+                text-align: left;
+                width: 33.33%;
+                .aside_products_tr_td:first-child{
+                    width: 20%;
+                    .aside_products_tr_td_img{
+                        width: 4rem;
+                    }
+                }
+                .aside_products_tr_td{
+                    width: 70%;
+                    padding: 0.5rem 0.5rem 1rem 0rem;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    text-overflow: hide;
+                }
+                .aside_products_tr_td:last-child{
+                    width: 10%;
+                    padding: 0.5rem 0rem 1rem 0rem;
+                }
+            }
+        }
+    }
+    .aside_total{
+        margin-top: 1rem;
+        .aside_total_p{
+            font-weight: 700;
         }
     }
     .aside_buttons{
@@ -19,21 +53,22 @@
         justify-content: center;
         align-items: center;
         padding-top: 1rem;
-        border-top: 0.1rem solid #747272;
         .aside_buttons_button{
             width: 100%;
             margin-bottom: 0.8rem;
             font-size: 600;
-            border-radius: 0.5rem;
-            background-color: #0a84ff;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            background-color: #0071e3;
             color: #ffffff;
             border: none;
             padding: 0.5rem 0rem;
-            cursor: pointer;
             transition: all .1s ease-in-out;
+            font-weight: 500;
             text-align: center;
+            cursor: pointer;
             &:hover{
-                transform: scale(1.01);
+                background-color: #147ce5;
                 transition: all .1s ease-in-out;
             }
             &:active{
@@ -42,29 +77,12 @@
             }
         }
         .aside_buttons_p{
-            text-decoration: underline;
-            font-size: 0.8rem;
+            color: #0a84ff;
+            font-size: 0.9rem;
             cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
 }
-
-// @media(max-width: 992px){
-//     .aside{
-//         position: fixed;
-//         padding: 1rem 1rem 0rem 1rem;
-//         top: 0%;
-//         left: -100%;
-//         background-color: #E8F1F5;
-//         z-index: 2;
-//         opacity: 0;
-//         transition: all 0.4s ease;
-//         height: 100vh;
-//         overflow-y: auto;
-//         box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-//     }
-//     .active{
-//         left: 0%;
-//         opacity: 1;
-//     }
-// }

@@ -9,7 +9,7 @@ export default function Category({image, title, category, setCategory}) {
 
   const isInOrder = () => {
     const exist = order.find(item => item.category === category)
-    console.log(exist)
+
     if(exist) {
       return setOrderProduct(exist)
     } else {
@@ -23,14 +23,14 @@ export default function Category({image, title, category, setCategory}) {
 
   return (
     <div className={`${orderProduct ? 'openActions' : 'category'}`} onClick={() => !orderProduct && setCategory(category)}>
-      <div className='category_actions'>
+      {/* <div className='category_actions'>
         <div className='category_actions_delete' onClick={() => deleteProductFromOrder(orderProduct)}>
           <p className='category_actions_delete_p'>Eliminar</p>
         </div>
         <div className='category_actions_change' onClick={() => setCategory(category)}>
           <p className='category_actions_change_p'>Cambiar</p>
         </div>
-      </div>
+      </div> */}
       <div className='mainContent'>
         <img className='mainContent_img' src={orderProduct ? orderProduct.image : hdd}/>
         <p className={orderProduct ? 'mainContent_p' : 'mainContent_p_title'}>{orderProduct ? orderProduct.name : title}</p>

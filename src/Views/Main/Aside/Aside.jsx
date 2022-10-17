@@ -6,7 +6,7 @@ import BrandSelect from '../../../SelectBrand/SelectBrand';
 import './Aside.scss';
 
 const Aside = () => {
-  // const { openMenu, intelOrAmd } = useOrderContext()
+  const { openMenu, order } = useOrderContext()
 
   // return (
   //   <div className={openMenu===true ? 'aside active' : 'aside'}>
@@ -27,15 +27,36 @@ const Aside = () => {
   //     <AsideItem img={'https://www.venex.com.ar/images/configurador_pc/headset.png'} h3={'Auricular'} p={'No seleccionaste un auricular'} category={'auricular'} />
   //   </div>
   // )
+  console.log(order)
   return (
     <aside className='aside'>
       <div className='aside_title'>
-        <h2 className='aside_title_h2'>Tu pedido</h2>
+        <h2 className='aside_title_h2'>Tu Pedido</h2>
       </div>
-      <p>Total: $123.123</p>
+      <div className='aside_products'>
+        <table className='aside_products_table'>
+          <tr className='aside_products_tr'>
+            <th className='aside_products_tr_th'>Producto</th>
+            <th className='aside_products_tr_th'></th>
+            <th className='aside_products_tr_th'>Precio</th>
+          </tr>
+          {order.map((product) => {
+            return (
+              <tr className='aside_products_tr'>
+                <td className='aside_products_tr_td'><img className='aside_products_tr_td_img' src={product.image}/></td>
+                <td className='aside_products_tr_td'>{product.name}</td>
+                <td className='aside_products_tr_td'>${(product.price).toLocaleString("ES-ar")}</td>
+              </tr>
+            )
+          })}
+        </table>
+      </div>
+      <div className='aside_total'>
+        <p className='aside_total_p'>$123.123</p>
+      </div>
       <div className='aside_buttons'>
-        <button className='aside_buttons_button' onClick={() => console.log("test")}>FINALIZAR PEDIDO</button>
-        <p className='aside_buttons_p'>reiniciar Pedido</p>
+        <button className='aside_buttons_button' onClick={() => console.log("test")}>Finalizar Pedido</button>
+        <p className='aside_buttons_p'>Reiniciar Pedido</p>
       </div>
     </aside>
   )
