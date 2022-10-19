@@ -7,13 +7,13 @@
     text-align: center;
     background-color: #ffffff;
     width: calc(25% - 1rem);
-    height: 8rem;
+    height: 10rem;
     border: none;
+    padding: 0.5rem;
     margin: 0rem 1rem 1rem 0rem;
     border-radius: 1rem;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     transition: all .15s ease-in-out;
-    cursor: pointer;
     @media(max-width: 1200px){
         width: calc(33.33% - 1rem);
         height: 10rem;
@@ -32,44 +32,24 @@
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .15);
         transition: all .15s ease-in-out;
     }
-    .category_actions{
-        display: none;
-        opacity: 0;
-        transform: scale(0);
+    .categoryClose{
         width: 100%;
-        height: 100%;
-        transition: all .15s ease-in-out;
-        .category_actions_delete{
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #005691;
-            border-radius: 0.25rem 0rem 0rem 0.25rem;
-            transition: all .3s ease-in-out;
+        display: flex;
+        justify-content: flex-end;
+        .categoryClose_span{
+            font-size: 1.8rem;
+            font-weight: 500;
+            transition: all .15s ease-in-out;
+            cursor: pointer;
             &:hover{
-                background-color: #003457;
-                transition: all .3s ease-in-out;
-            }
-            .category_actions_delete_p{
-                font-weight: 700;
-                color: #eeeeee;
-            }
-        }
-        .category_actions_change{
-            @extend .category_actions_delete;
-            border-radius: 0rem 0.25rem 0.25rem 0rem;
-            &:hover{
-                transition: opacity .3s ease-in-out;
-            }
-            .category_actions_change_p{
-                font-weight: 700;
-                color: #eeeeee;
+                transition: all .15s ease-in-out;
+                transform: scale(1.05);
             }
         }
     }
     .mainContent{
         width: 100%;
+        cursor: pointer;
         .mainContent_img{
             padding-bottom: 1rem;
             width: 3rem;
@@ -87,27 +67,7 @@
         }
     }
 }
-.openActions{
+.categoryInOrder{
     @extend .category;
-    &:hover{
-        outline: none;
-    }
-}
-.openActions:hover > .category {
-    border: none;
-}
-.openActions:hover > .category:hover {
-    outline: none;
-}
-.openActions:hover > .category_actions{
-    opacity: 1;
-    display: flex;
-    transform: scale(1);
-    transition: all .15s ease-in-out;
-}
-.openActions:hover > .mainContent{
-    opacity: 0;
-    display: none;
-    transform: scale(0);
-    transition: all .5s;
+    cursor: pointer;
 }
