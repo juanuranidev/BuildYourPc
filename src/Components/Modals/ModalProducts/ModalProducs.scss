@@ -11,15 +11,22 @@
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     z-index: 10;
     padding: 1rem;
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
+    @media(max-width: 576px){
+        width: 80%;
+        height: 60%;
+    }
     .modalProducts_close{
         display: flex;
         justify-content: flex-end;
         padding-bottom: 1rem;
         .modalProducts_close_p{
+            font-size: 2rem;
             cursor: pointer;
+            transition: all .15s ease-in-out;
             &:hover{
-                text-decoration: underline;
+                transition: all .15s ease-in-out;
+                transform: scale(1.05);
             }
         }
     }
@@ -31,9 +38,13 @@
         flex-wrap: wrap;
         overflow-y: scroll;
         .modalProducts_content_div{
-            display: flex;;
+            display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
+    }
+    .modalProducts_content_loading{
+        @extend .modalProducts_content;
+        align-items: center;
     }
 }

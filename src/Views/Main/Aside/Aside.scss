@@ -22,6 +22,9 @@
             .aside_products_tr{
                 text-align: left;
                 width: 33.33%;
+                .aside_products_tr_th:last-child{
+                    text-align: right
+                }
                 .aside_products_tr_td:first-child{
                     width: 5%;
                     .aside_products_tr_td_img{
@@ -61,7 +64,6 @@
         .aside_buttons_button{
             width: 14rem;
             margin-bottom: 0.8rem;
-            font-size: 600;
             border-radius: 1rem;
             font-size: 0.9rem;
             background-color: #0071e3;

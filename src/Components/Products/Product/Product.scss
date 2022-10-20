@@ -2,11 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 15rem;
+    width: 14rem;
     background-color: #ffffff;
-    border-radius: 0.25rem;
+    border-radius: 1rem;
     margin: 0rem 1rem 1rem 0rem;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+    @media(max-width: 376px){
+        width: 90%;
+    }
     .product_img{
         width: 70%;
         height: 12rem;
@@ -24,21 +27,27 @@
         justify-content: space-between;
         align-items: center;
         margin: 0rem 1rem 1rem 1rem;
+        @media(max-width: 576px){
+            flex-direction: column;
+        }
         .productActions_p{
             font-weight: 600;
+            @media(max-width: 576px){
+                margin-bottom: 1rem;
+            }
         }
         .productActions_amount{
             display: flex;
             align-items: center;
             .productActions_amount_span{
-                color: #005691;
-                transition: all .1s;
+                color: #0071e3;
+                transition: all 0.1s ease-in-out;
                 cursor: pointer;
                 &:hover{
-                    color: #003457;
+                    color: #147ce5;
                 }
                 &:active{
-                    transition: all .1s;
+                    transition: all 0.1s ease-in-out;
                     transform: scale(.95);
                 }
             }
@@ -53,22 +62,23 @@
         display: flex;
         padding: 0rem 1rem 1rem 1rem;
         .product_button_button{
-            background-color: #005691;
+            background-color: #0071e3;
             color: #ffffff;
             border: none;
-            border-radius: 0.25rem;
+            border-radius: 1rem;
             padding: 0.5rem 1rem;
             font-weight: 500;
             font-size: 1rem;
             width: 100%;
-            transition: all .1s;
+            transition: all .1s ease-in-out;
             cursor: pointer;
             &:hover{
-                background-color: #003457;
+                background-color: #147ce5;
+                transition: all .1s ease-in-out;
             }
             &:active{
-                transform: scale(.95);
-                transition: all .1s;
+                transform: scale(.99);
+                transition: all .1s ease-in-out;
             }
         }
     }
