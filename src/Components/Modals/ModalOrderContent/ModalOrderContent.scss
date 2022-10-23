@@ -19,6 +19,10 @@
 
         }
         .modalOrderConten_header_div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             .modalOrderConten_header_div_button{
                 background-color: #0071e3;
                 color: #ffffff;
@@ -41,8 +45,11 @@
             }
             .modalOrderConten_header_div_p{
                 font-size: 0.8rem;
-                padding: 0.2rem 0rem 0rem 0.2rem;
+                padding-top: 0.2rem;
                 cursor: pointer;
+                &:hover{
+                    text-decoration: underline
+                }
             }
         }
     }

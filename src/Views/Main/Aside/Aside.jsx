@@ -55,7 +55,13 @@ const Aside = () => {
         </div>
       </aside>
       <ModalBackground open={modalOrderContent || modalPdf} close={() => modalPdf ? handleCloseModalPdf() : setModalOrderContent(false)} />
-      {modalOrderContent && <ModalOrderContent order={order} openPdf={handleOpenModalPdf} />}
+      {modalOrderContent &&
+        <ModalOrderContent
+          order={order}
+          openPdf={handleOpenModalPdf}
+          close={() => setModalOrderContent(false)}
+        />
+      }
       {modalPdf && 
         <ModalPdf close={handleCloseModalPdf} >
           <OrderPdf products={order} />
