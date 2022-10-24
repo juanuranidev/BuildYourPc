@@ -1,4 +1,5 @@
 import React from 'react'
+import Products from '../../Products/Products'
 import "./ModalOrderContent.scss"
 
 export default function ModalOrderContent({order, close, openPdf}) {
@@ -10,6 +11,9 @@ export default function ModalOrderContent({order, close, openPdf}) {
                 <button className='modalOrderConten_header_div_button' onClick={openPdf}>Descargar PDF</button>
                 <p className='modalOrderConten_header_div_p' onClick={close}>Regresar y Editar</p>
             </div>
+        </div>
+        <div className='modalOrderConten_content'>
+          <Products data={order} />
         </div>
     </div>
   )

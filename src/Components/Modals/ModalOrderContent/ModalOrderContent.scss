@@ -15,6 +15,7 @@
     .modalOrderConten_header{
         display: flex;
         justify-content: space-evenly;
+        padding-bottom: 2.5rem;
         .modalOrderConten_header_h2{
 
         }
@@ -52,5 +53,11 @@
                 }
             }
         }
+    }
+    .modalOrderConten_content{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow-y: scroll;
     }
 }
