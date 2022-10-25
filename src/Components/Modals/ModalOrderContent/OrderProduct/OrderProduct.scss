@@ -1,0 +1,29 @@
+.orderProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 14rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin: 0rem 1rem 1rem 0rem;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 10%);
+    .orderProduct_img{
+        width: 70%;
+        height: 12rem;
+        margin: 0rem auto 1rem auto;
+    }
+    .orderProduct_h3{
+        color: #000000;
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 700;
+        margin: 0rem 1rem 1rem 1rem;
+    }
+    .orderProduct_content{
+        display: flex;
+        flex-direction: column;
+        .orderProduct_content_p{
+
+        }
+    }
+}

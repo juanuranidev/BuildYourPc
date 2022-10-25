@@ -1,6 +1,7 @@
 import React from 'react'
 import Products from '../../Products/Products'
 import "./ModalOrderContent.scss"
+import OrderProduct from './OrderProduct/OrderProduct'
 
 export default function ModalOrderContent({order, close, openPdf}) {
   return (
@@ -13,7 +14,7 @@ export default function ModalOrderContent({order, close, openPdf}) {
             </div>
         </div>
         <div className='modalOrderConten_content'>
-          <Products data={order} />
+          {order.map((product) => <OrderProduct product={product} key={product.id} /> )}
         </div>
     </div>
   )
