@@ -7,7 +7,7 @@ function ModalPdf({children, close}) {
     <div className="modalPdf">
         <div className='modalPdf_title'>
             <h2 className="modalPdf_title_h2"> Orden de compra</h2>
-            <p  className="modalPdf_title_p" onClick={close}>Cerrar</p>
+            <p className="modalPdf_title_p" onClick={close}>Cerrar</p>
         </div>
         <PDFViewer className="modalPdf_viewer">
             {children}

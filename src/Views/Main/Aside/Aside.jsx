@@ -58,6 +58,7 @@ const Aside = () => {
       {modalOrderContent &&
         <ModalOrderContent
           order={order}
+          totalPrice={totalPrice}
           openPdf={handleOpenModalPdf}
           close={() => setModalOrderContent(false)}
         />

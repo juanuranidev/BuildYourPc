@@ -1,4 +1,4 @@
-.modalOrderConten{
+.modalOrderContent{
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -12,19 +12,44 @@
     z-index: 10;
     padding: 1rem;
     border-radius: 0.5rem;
-    .modalOrderConten_header{
+    .modalOrderContent_close{
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 1rem;
+        .modalOrderContent_close_p{
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all .15s ease-in-out;
+            &:hover{
+                transition: all .15s ease-in-out;
+                transform: scale(1.05);
+            }
+        }
+    }
+    .modalOrderContent_header{
         display: flex;
         justify-content: space-evenly;
         padding-bottom: 2.5rem;
-        .modalOrderConten_header_h2{
-
+        @media(max-width: 768px){
+            flex-direction: column;
+            padding-bottom: 1.5rem;
         }
-        .modalOrderConten_header_div{
+        .modalOrderContent_header_main{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            @media(max-width: 768px){
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 1.5rem;
+            }
+        }
+        .modalOrderContent_header_div{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            .modalOrderConten_header_div_button{
+            .modalOrderContent_header_div_button{
                 background-color: #0071e3;
                 color: #ffffff;
                 border: none;
@@ -44,7 +69,7 @@
                     transition: all .1s ease-in-out;
                 }
             }
-            .modalOrderConten_header_div_p{
+            .modalOrderContent_header_div_p{
                 font-size: 0.8rem;
                 padding-top: 0.2rem;
                 cursor: pointer;
@@ -54,7 +79,7 @@
             }
         }
     }
-    .modalOrderConten_content{
+    .modalOrderContent_content{
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
