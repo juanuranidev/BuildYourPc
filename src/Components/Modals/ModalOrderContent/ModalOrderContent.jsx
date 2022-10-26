@@ -1,7 +1,6 @@
 import React from 'react'
-import Products from '../../Products/Products'
-import "./ModalOrderContent.scss"
 import OrderProduct from './OrderProduct/OrderProduct'
+import "./ModalOrderContent.scss"
 
 export default function ModalOrderContent({order, close, openPdf, totalPrice}) {
   return (

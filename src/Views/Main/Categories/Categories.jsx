@@ -14,19 +14,84 @@ export default function Categories() {
   return (
     <React.Fragment>
       <section className='categories'>
-        <Category title={"Procesador"} category={""} setCategory={setCategory} />
-        <Category title={"Motherboard"} category={"motherboard"} setCategory={setCategory} />
-        <Category title={"Memoria Ram"} category={"memoriaram"} setCategory={setCategory} />
-        <Category title={"Disco Duro - HDD"} category={"discoduro"} setCategory={setCategory} />
-        <Category title={"Disco Sólido - SSD"} category={"discossd"} setCategory={setCategory} />
-        <Category title={"Placa de video"} category={"placadevideo"} setCategory={setCategory} />
-        <Category title={"Fuente"} category={"fuente"} setCategory={setCategory} />
-        <Category title={"Gabinete"} category={"gabinete"} setCategory={setCategory} />
-        <Category title={"Cooler"} category={"cooler"} setCategory={setCategory} />
-        <Category title={"Monitor"} category={"monitor"} setCategory={setCategory} />
-        <Category title={"Teclado"} category={"teclado"} setCategory={setCategory} />
-        <Category title={"Mouse"} category={"mouse"} setCategory={setCategory} />
-        <Category title={"Auricular"} category={"auricular"} setCategory={setCategory} />
+        <Category 
+          title={"Procesador"}
+          category={""}
+          setCategory={setCategory} 
+          image={"https://www.venex.com.ar/images/configurador_pc/micro.png"}
+        />
+       <Category 
+          title={"Motherboard"}
+          category={"motherboard"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/motherboard.png"}
+        />
+        <Category 
+          title={"Memoria Ram"}
+          category={"memoriaram"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/ram.png"}
+        />
+        <Category 
+          title={"Disco Duro - HDD"}
+          category={"discoduro"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/hdd.png"}
+        />
+        <Category 
+          title={"Disco Sólido - SSD"}
+          category={"discossd"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/ssd.png"}
+        />
+        <Category 
+          title={"Placa de video"}
+          category={"placadevideo"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/gpu.png"}
+        />
+        <Category 
+          title={"Fuente"}
+          category={"fuente"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/fuente.png"}
+        />
+        <Category 
+          title={"Gabinete"}
+          category={"gabinete"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/gabinete.png"}
+        />
+        <Category 
+          title={"Cooler"}
+          category={"cooler"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/cooler.png"}
+        />
+        <Category 
+          title={"Monitor"}
+          category={"monitor"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/monitor.png"}
+        />
+        <Category 
+          title={"Teclado"}
+          category={"teclado"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/keyboard.png"}
+        />
+        <Category 
+          title={"Mouse"}
+          category={"mouse"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/mouse.png"}
+        />
+        <Category 
+          title={"Auricular"}
+          category={"auricular"}
+          setCategory={setCategory}
+          image={"https://www.venex.com.ar/images/configurador_pc/headset.png"}
+        />
         {category && <ModalProducts category={category} close={handleCloseModalProducts} />}
       </section>
       <ModalBackground open={category} close={handleCloseModalProducts}/>

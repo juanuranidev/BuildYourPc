@@ -27,6 +27,7 @@ export const OrderContextProvider = ({children}) => {
 
     const addProductToOrder = (product, amount) => {
         let isInOrder = order.find(prod => prod.category === product.category)
+        
         if(isInOrder){
             setOrder([...order.filter(x => x.category !== product.category),{...product, quantity: amount}])
         } else {

@@ -9,6 +9,7 @@ import OrderPdf from "../../../Components/Pdf/OrderPdf/OrderPdf"
 
 const Aside = () => {
   const { order, setOrder, totalPrice} = useOrderContext()
+
   const [modalPdf, setModalPdf] = useState(false)
   const [modalOrderContent, setModalOrderContent] = useState(false)
 
@@ -29,6 +30,7 @@ const Aside = () => {
           <h2 className='aside_title_h2'>Tu Pedido</h2>
         </div>
         <div className='aside_products'>
+          {order.length >= 1 &&
           <table className='aside_products_table'>
             <tr className='aside_products_tr'>
               <th className='aside_products_tr_th'>Producto</th>
@@ -45,6 +47,7 @@ const Aside = () => {
               )
             })}
           </table>
+          }
         </div>
         <div className='aside_total'>
           <p className='aside_total_p'>Total: ${Number(totalPrice).toLocaleString("ES-ar")}</p>
@@ -54,13 +57,12 @@ const Aside = () => {
           <p className='aside_buttons_p' onClick={() => setOrder([])}>Reiniciar Pedido</p>
         </div>
       </aside>
-      <ModalBackground open={modalOrderContent || modalPdf} close={() => modalPdf ? handleCloseModalPdf() : setModalOrderContent(false)} />
       {modalOrderContent &&
         <ModalOrderContent
-          order={order}
-          totalPrice={totalPrice}
-          openPdf={handleOpenModalPdf}
-          close={() => setModalOrderContent(false)}
+        order={order}
+        totalPrice={totalPrice}
+        openPdf={handleOpenModalPdf}
+        close={() => setModalOrderContent(false)}
         />
       }
       {modalPdf && 
@@ -68,6 +70,7 @@ const Aside = () => {
           <OrderPdf products={order} />
         </ModalPdf>
       }
+      <ModalBackground open={modalOrderContent || modalPdf} close={() => modalPdf ? handleCloseModalPdf() : setModalOrderContent(false)} />
     </React.Fragment>
   )
 }
