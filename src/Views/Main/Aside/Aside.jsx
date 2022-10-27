@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { useOrderContext } from '../../../Context/OrderContext';
-import ModalOrderContent from '../../../Components/Modals/ModalOrderContent/ModalOrderContent';
-import BrandSelect from '../../../SelectBrand/SelectBrand';
-import './Aside.scss';
-import ModalBackground from '../../../Components/Modals/ModalBackground/ModalBackground';
-import ModalPdf from '../../../Components/Modals/ModalPdf/ModalPdf';
 import OrderPdf from "../../../Components/Pdf/OrderPdf/OrderPdf"
+import ModalPdf from '../../../Components/Modals/ModalPdf/ModalPdf';
+import ModalBackground from '../../../Components/Modals/ModalBackground/ModalBackground';
+import ModalOrderContent from '../../../Components/Modals/ModalOrderContent/ModalOrderContent';
+import './Aside.scss';
 
 const Aside = () => {
   const { order, setOrder, totalPrice} = useOrderContext()

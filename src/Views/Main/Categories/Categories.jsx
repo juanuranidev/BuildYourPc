@@ -16,7 +16,7 @@ export default function Categories() {
       <section className='categories'>
         <Category 
           title={"Procesador"}
-          category={""}
+          category={"microprocesador"}
           setCategory={setCategory} 
           image={"https://www.venex.com.ar/images/configurador_pc/micro.png"}
         />
