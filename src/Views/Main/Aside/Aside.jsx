@@ -52,7 +52,7 @@ const Aside = () => {
           <p className='aside_total_p'>Total: ${Number(totalPrice).toLocaleString("ES-ar")}</p>
         </div>
         <div className='aside_buttons'>
-          <button className='aside_buttons_button' onClick={() => setModalOrderContent(true)}>Finalizar Pedido</button>
+          <button className='aside_buttons_button' disabled={!order.length} onClick={() => setModalOrderContent(true)}>Finalizar Pedido</button>
           <p className='aside_buttons_p' onClick={() => setOrder([])}>Reiniciar Pedido</p>
         </div>
       </aside>
