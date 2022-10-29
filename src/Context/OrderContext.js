@@ -8,21 +8,27 @@ export function useOrderContext() {
 }
 
 export const OrderContextProvider = ({children}) => {
-    const [intelOrAmd, setIntelOrAmd] = useState(null)
     const [data, setData] = useState([])
-    const [loader, setLoader] = useState()
     const [order, setOrder] = useState([])
+    const [loader, setLoader] = useState()
     const [totalPrice, setTotalPrice] = useState()
     const [categoryToFetch, setCategoryToFetch] = useState()
 
-    const getProducts = (categoryToFetch) => {
+    const getProducts = async (categoryToFetch) => {
         setLoader(true)
-        const dataBase = getFirestore()
-        const queryCollection = query(collection(dataBase, 'products'), where('category', '==', `${categoryToFetch}`))
-        getDocs(queryCollection)
-          .then(res => setData(res.docs.map(prod => ({id: prod.id, ...prod.data()}))))
-          .catch(err => console.log(err))
-          .finally(() => setLoader(false))     
+        
+        try {
+            const dataBase = getFirestore()
+            const queryCollection = query(collection(dataBase, 'products'), where('category', '==', `${categoryToFetch}`))
+            
+            const response = await getDocs(queryCollection)
+              .then(res => setData(res.docs.map(prod => ({id: prod.id, ...prod.data()}))))
+              .catch(err => console.log(err))
+
+        } catch (error) {
+            console.log(error)
+        }
+          setLoader(false)
     }
 
     const addProductToOrder = (product, amount) => {
@@ -35,16 +41,8 @@ export const OrderContextProvider = ({children}) => {
         }
     }
 
-    const deleteProductFromOrder = (product) => {
-        setOrder([...order.filter(x => x.id !== product.id)])
-    }
-
-    const handleSetBrand = (brand) => {
-        setIntelOrAmd(brand)
-        getProducts(`microprocesador${brand}`)
-        setOrder([])
-    }
-
+    const deleteProductFromOrder = product => setOrder([...order.filter(x => x.id !== product.id)])
+    
     useEffect(() => {
         let totalPrice = 0
         let totalProduct = 0
@@ -70,8 +68,7 @@ export const OrderContextProvider = ({children}) => {
             setCategoryToFetch,
             getProducts,
             addProductToOrder,
-            deleteProductFromOrder,
-            handleSetBrand
+            deleteProductFromOrder,      
         }}>
             {children}
         </OrderContext.Provider>
