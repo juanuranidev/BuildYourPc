@@ -39,7 +39,7 @@ const Aside = () => {
             {order.map((product) => {
               return (
                 <tr className='aside_products_tr'>
-                  <td className='aside_products_tr_td'><img className='aside_products_tr_td_img' src={product.image}/></td>
+                  <td className='aside_products_tr_td'><img className='aside_products_tr_td_img' alt="" src={product.image}/></td>
                   <td className='aside_products_tr_td'>{product.name} x{product.quantity}</td>
                   <td className='aside_products_tr_td'>${((product.quantity * product.price)).toLocaleString("ES-ar")}</td>
                 </tr>

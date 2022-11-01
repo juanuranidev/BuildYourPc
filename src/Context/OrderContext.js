@@ -55,8 +55,6 @@ export const OrderContextProvider = ({children}) => {
 
     return(
         <OrderContext.Provider value={{
-            intelOrAmd,
-            setIntelOrAmd,
             data,
             loader,
             setData,

@@ -30,7 +30,7 @@ export default function Category({image, title, category, setCategory}) {
         </div>
       )}
       <div className='mainContent' onClick={() => setCategory(category)}>
-        <img className={`${isInOrder ? "mainContent_img_order" : "mainContent_img"}`} src={isInOrder ? isInOrder.image : image}/>
+        <img className={`${isInOrder ? "mainContent_img_order" : "mainContent_img"}`} alt="" src={isInOrder ? isInOrder.image : image}/>
         <p className={isInOrder ? 'mainContent_p' : 'mainContent_p_title'}>{isInOrder ? isInOrder.name : title}</p>
       </div>
     </div>
